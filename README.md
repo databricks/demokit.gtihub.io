@@ -26,16 +26,7 @@ The diagram below describes the components of the demo kit.  Please refer to [ht
 - Arcion host with dedicated metadata database
 - Data destination
 
-```mermaid!
-graph LR
-    L[Load Generator<br>TPC-C<br>YCSB] --> S
-    subgraph Arcion Cluster
-        A1
-        M[(Meta <br>Data)]
-    end
-    S[(Source <br>Data)] --> A1[Arcion <br> UI]
-    A1 --> T[(Destination<br>Data)]
-```
+[![](https://mermaid.ink/img/pako:eNpNj8FqwzAQRH9F7MmF-OCrKQHXhlJwoFTpocg5bKxNYxpLYb06lJB_rxQF0j09mJkd5gKjtwQ1fDOej6r_GJyK15veo1Wv5IhRPD_veb19b8s2wVerX3aqLNdKZ_cS9jne8Dh5p9pTWIQ4i-ma6sEbU2xIUKVPHQo-7bJGzmbQptA-8Ej_LLe2pjL3giSoz7d7sqlu8tYUHS0yOZToeWRhBTPxjJONMy8pMoAcaaYB6ogW-WeAwV2jD4N4_etGqIUDrSCcLQp1E8Z5M9QHPC10_QN9k16L?type=png)](https://mermaid.live/edit#pako:eNpNj8FqwzAQRH9F7MmF-OCrKQHXhlJwoFTpocg5bKxNYxpLYb06lJB_rxQF0j09mJkd5gKjtwQ1fDOej6r_GJyK15veo1Wv5IhRPD_veb19b8s2wVerX3aqLNdKZ_cS9jne8Dh5p9pTWIQ4i-ma6sEbU2xIUKVPHQo-7bJGzmbQptA-8Ej_LLe2pjL3giSoz7d7sqlu8tYUHS0yOZToeWRhBTPxjJONMy8pMoAcaaYB6ogW-WeAwV2jD4N4_etGqIUDrSCcLQp1E8Z5M9QHPC10_QN9k16L)
 
 # Prerequisites
 
