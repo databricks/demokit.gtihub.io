@@ -26,7 +26,7 @@ The diagram below describes the components of the demo kit.  Please refer to [ht
 - Arcion host with dedicated metadata database
 - Data destination
 
-<div class="mermaid">
+```mermaid!
 graph LR
     L[Load Generator<br>TPC-C<br>YCSB] --> S
     subgraph Arcion Cluster
@@ -35,7 +35,7 @@ graph LR
     end
     S[(Source <br>Data)] --> A1[Arcion <br> UI]
     A1 --> T[(Destination<br>Data)]
-</div>
+```
 
 # Prerequisites
 
