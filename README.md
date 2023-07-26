@@ -1,6 +1,6 @@
-Welcome to [Arcion](http://arcion.io) demo kit.
+Welcome to the [Arcion](http://arcion.io) demo kit.
 Arcion replicates data from one platform to another.
-The demo kit makes testing and demo of Arcion easy.
+The demo kit makes testing and demoing Arcion easy.
 
 # Install the Arcion demo kit  
 
@@ -49,10 +49,10 @@ Assumptions:
 
 # Recordings of the Demo
 
-Arcion support snapshot, real-time, snapshot, and delta-snapshot replication modes.
-Recorded Arcion CLI demos of source, destination, and replication type combination is available.
+Arcion supports snapshot, real-time, snapshot, and delta-snapshot replication modes.
+Recorded Arcion CLI demos of source, destination, and replication type combination are available.
 The recordings use `asciiinema` so that YAML config files used can be cut / pasted.
-This is functional demo using TPCC and YCSB.
+This is a functional demo using TPCC and YCSB.
 The data size is 1GB each, 1 thread on given to Arcion, and 8 GB of RAM shared.  
 
 - Left side of the table (the left column) is the source.
