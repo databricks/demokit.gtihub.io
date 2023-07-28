@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=b7dc8fc9677de47d31274b4e508b6c2dad7510c0" media="screen" type="text/css">
+    <link rel="stylesheet" href="/assets/css/print.css" media="print" type="text/css">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Setup Google CloudSQL MySQL | demokit.gtihub-io</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Setup Google CloudSQL MySQL" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Arcion Demo Kit docs" />
+<meta property="og:description" content="Arcion Demo Kit docs" />
+<link rel="canonical" href="http://localhost:4000/docs/google/cloudsql_mysql.html" />
+<meta property="og:url" content="http://localhost:4000/docs/google/cloudsql_mysql.html" />
+<meta property="og:site_name" content="demokit.gtihub-io" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Setup Google CloudSQL MySQL" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Arcion Demo Kit docs","headline":"Setup Google CloudSQL MySQL","url":"http://localhost:4000/docs/google/cloudsql_mysql.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <a href="http://localhost:4000/">
+          <h1>demokit.gtihub-io</h1>
+        </a>
+        <h2>Arcion Demo Kit docs</h2>
+        
+          <a href="https://github.com/arcionlabs/demokit.gtihub-io" class="button"><small>View project on</small> GitHub</a>
+        
+        
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          
+<h1 id="setup-google-cloudsql-mysql">Setup Google CloudSQL MySQL</h1>
+
+<ul>
+  <li>click Google Cloud -&gt; Create a Database -&gt; Create Instance</li>
+  <li>MySQL -&gt; Choose MySQL</li>
+  <li>Enable API if asked</li>
+  <li>Type instand id - pg8sand</li>
+  <li>Type password</li>
+  <li>Choose MySQL 8.0</li>
+  <li>Choose Cloud SQL Edition Enterprise</li>
+  <li>Choose sandbox ($0.14 per hour)</li>
+  <li>Choose us-central (default)</li>
+  <li>Choose singleZone</li>
+  <li>Choose customize your instance</li>
+  <li>Click data protection
+    <ul>
+      <li>uncheck Enable Delete Protection</li>
+    </ul>
+  </li>
+  <li>Click flags
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">cloudsql.logical_decoding on</code></li>
+      <li><code class="language-plaintext highlighter-rouge">cloudsql.enable_pglogical on</code></li>
+    </ul>
+  </li>
+  <li>Create instance</li>
+</ul>
+
+<p>Once the instance comes up</p>
+
+<ul>
+  <li>click connection</li>
+  <li>click networking</li>
+  <li>click add network</li>
+  <li>name: xxx</li>
+  <li>network. xx.xx.xx.xx</li>
+  <li>click save</li>
+</ul>
+
+<p>to get you ip from home internet try
+<a href="https://whatismyipaddress.com/">whatismyipaddress</a>.com</p>
+
+<p>Test from local mysql client</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql <span class="nt">-u</span> root <span class="nt">-h</span> 34.123.167.223 <span class="nt">--password</span><span class="o">=</span>Passw0rdmy8sand
+</code></pre></div></div>
+
+<p>wait couple of minutes.  jot down the following</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">SRCDB_HOST</span><span class="o">=</span>34.123.167.223
+<span class="nb">export </span><span class="nv">SRCDB_TYPE</span><span class="o">=</span>mysql
+<span class="nb">export </span><span class="nv">SRCDB_DIR</span><span class="o">=</span>mysql
+<span class="nb">export </span><span class="nv">SRCDB_PW</span><span class="o">=</span>Passw0rdmy8sand
+
+
+mysql
+<span class="nv">ARCION_HOME</span><span class="o">=</span>/opt/arcion/23020121 <span class="nv">SRCDB_HOST</span><span class="o">=</span>34.123.167.223 <span class="nv">SRCDB_TYPE</span><span class="o">=</span>mysql <span class="nv">SRCDB_DIR</span><span class="o">=</span>mysql <span class="nv">SRCDB_PW</span><span class="o">=</span>Passw0rdmy8sand arcdemo.sh full 34.123.167.223 mysql
+
+<span class="nv">ARCION_HOME</span><span class="o">=</span>/opt/arcion/23020121 <span class="nv">DSTDB_HOST</span><span class="o">=</span>34.123.167.223 <span class="nv">DSTDB_TYPE</span><span class="o">=</span>mysql <span class="nv">DSTDB_DIR</span><span class="o">=</span>mysql <span class="nv">DSTDB_PW</span><span class="o">=</span>Passw0rdmy8sand arcdemo.sh full mysql 34.123.167.223
+
+oracle
+<span class="nv">ARCION_HOME</span><span class="o">=</span>/opt/arcion/23020121 <span class="nv">SRCDB_HOST</span><span class="o">=</span>34.123.167.223 <span class="nv">SRCDB_TYPE</span><span class="o">=</span>mysql <span class="nv">SRCDB_DIR</span><span class="o">=</span>mysql <span class="nv">SRCDB_PW</span><span class="o">=</span>Passw0rdmy8sand arcdemo.sh full 34.123.167.223 oraee
+
+<span class="nv">ARCION_HOME</span><span class="o">=</span>/opt/arcion/23020121 <span class="nv">DSTDB_HOST</span><span class="o">=</span>34.123.167.223 <span class="nv">DSTDB_TYPE</span><span class="o">=</span>mysql <span class="nv">DSTDB_DIR</span><span class="o">=</span>mysql <span class="nv">DSTDB_PW</span><span class="o">=</span>Passw0rdmy8sand arcdemo.sh full oraee 34.123.167.223
+
+db2
+<span class="nv">ARCION_HOME</span><span class="o">=</span>/opt/arcion/23020121 <span class="nv">DSTDB_HOST</span><span class="o">=</span>34.123.167.223 <span class="nv">DSTDB_TYPE</span><span class="o">=</span>mysql <span class="nv">DSTDB_DIR</span><span class="o">=</span>mysql <span class="nv">DSTDB_PW</span><span class="o">=</span>Passw0rdmy8sand arcdemo.sh full db2 34.123.167.223
+
+<span class="nv">ARCION_HOME</span><span class="o">=</span>/opt/arcion/23020121 <span class="nv">SRCDB_HOST</span><span class="o">=</span>34.123.167.223 <span class="nv">SRCDB_TYPE</span><span class="o">=</span>mysql <span class="nv">SRCDB_DIR</span><span class="o">=</span>mysql <span class="nv">SRCDB_PW</span><span class="o">=</span>Passw0rdmy8sand arcdemo.sh full 34.123.167.223 db2
+
+
+
+
+<span class="nv">ARCION_HOME</span><span class="o">=</span>/opt/arcion/23060101 <span class="nv">SRCDB_HOST</span><span class="o">=</span>34.123.167.223 <span class="nv">SRCDB_TYPE</span><span class="o">=</span>mysql <span class="nv">SRCDB_DIR</span><span class="o">=</span>mysql <span class="nv">SRCDB_PW</span><span class="o">=</span>Passw0rdmy8sand arcdemo.sh full 34.123.167.223 mysql
+
+
+<span class="nb">unset </span>SRCDB_HOST SRCDB_TYPE SRCDB_DIR SRCDB_PW
+
+<span class="nb">export </span><span class="nv">DSTDB_HOST</span><span class="o">=</span>34.123.167.223
+<span class="nb">export </span><span class="nv">DSTDB_TYPE</span><span class="o">=</span>mysql
+<span class="nb">export </span><span class="nv">DSTDB_DIR</span><span class="o">=</span>mysql
+<span class="nb">export </span><span class="nv">DSTDB_PW</span><span class="o">=</span>Passw0rdmy8sand
+arcdemo.sh full mysql <span class="nv">$DSTDB_HOST</span>
+
+<span class="nb">unset </span>DSTDB_HOST DSTDB_TYPE DSTDB_DIR DSTDB_PW
+
+
+</code></pre></div></div>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SHOW</span> <span class="n">VARIABLES</span><span class="p">;</span>
+<span class="k">SHOW</span> <span class="n">variables</span> <span class="k">like</span> <span class="s1">'autocommit'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>takes about 5 min to load the data</p>
+
+<h1 id="todo">TODO</h1>
+
+<h1 id="references">References</h1>
+
+
+        </section>
+
+        <aside id="sidebar">
+          
+
+          
+            <p class="repo-owner"><a href="https://github.com/arcionlabs/demokit.gtihub-io">demokit.gtihub-io</a> is maintained by <a href="https://github.com/arcionlabs">arcionlabs</a>.</p>
+          
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -96,6 +96,6 @@ snowflake |   |   |   |   |   |   |   |   |   |   |   |   |   | [va
 
 # Group
 
-- [Source](./docs/source/README.md)
-- [Target](./docs/targets/README.md)
+[Source](./docs/source/README.md)
+[Target](./docs/targets/README.md)
 

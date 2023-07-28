@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=b7dc8fc9677de47d31274b4e508b6c2dad7510c0" media="screen" type="text/css">
+    <link rel="stylesheet" href="/assets/css/print.css" media="print" type="text/css">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>demokit.gtihub-io | Arcion Demo Kit docs</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="demokit.gtihub-io" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Arcion Demo Kit docs" />
+<meta property="og:description" content="Arcion Demo Kit docs" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="demokit.gtihub-io" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="demokit.gtihub-io" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"Arcion Demo Kit docs","headline":"demokit.gtihub-io","name":"demokit.gtihub-io","url":"http://localhost:4000/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <a href="http://localhost:4000/">
+          <h1>demokit.gtihub-io</h1>
+        </a>
+        <h2>Arcion Demo Kit docs</h2>
+        
+          <a href="https://github.com/arcionlabs/demokit.gtihub-io" class="button"><small>View project on</small> GitHub</a>
+        
+        
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <p>Welcome to the <a href="http://arcion.io">Arcion</a> demo kit.
+Arcion replicates data from one platform to another.
+The demo kit makes testing and demoing Arcion easy.</p>
+
+<h1 id="install-the-arcion-demo-kit">Install the Arcion demo kit</h1>
+
+<p>Cut and paste the following in a terminal.</p>
+
+<ul>
+  <li>run the latest
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/bash -c "$(curl -k -fsSL https://raw.githubusercontent.com/arcionlabs/docker-dev/HEAD/install.sh)"
+</code></pre></div>    </div>
+  </li>
+  <li>to run a specific tag
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">ARCION_WORKLOADS_TAG</span><span class="o">=</span>23.07
+/bin/bash <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-k</span> <span class="nt">-fsSL</span> https://raw.githubusercontent.com/arcionlabs/docker-dev/<span class="k">${</span><span class="nv">ARCION_WORKLOADS_TAG</span><span class="k">:-</span><span class="nv">HEAD</span><span class="k">}</span>/install.sh<span class="si">)</span><span class="s2">"</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h1 id="about-the-arcion-demo-kit">About the Arcion demo kit</h1>
+
+<p>The diagram below describes the components of the demo kit.  Please refer to <a href="https://docs.arcion.io">https://docs.arcion.io</a> for more info.</p>
+
+<ul>
+  <li>Load Generator</li>
+  <li>Data source</li>
+  <li>Arcion host with dedicated metadata database</li>
+  <li>Data destination</li>
+</ul>
+
+<p><a href="https://mermaid.live/edit#pako:eNpNj8FqwzAQRH9F7MmF-OCrKQHXhlJwoFTpocg5bKxNYxpLYb06lJB_rxQF0j09mJkd5gKjtwQ1fDOej6r_GJyK15veo1Wv5IhRPD_veb19b8s2wVerX3aqLNdKZ_cS9jne8Dh5p9pTWIQ4i-ma6sEbU2xIUKVPHQo-7bJGzmbQptA-8Ej_LLe2pjL3giSoz7d7sqlu8tYUHS0yOZToeWRhBTPxjJONMy8pMoAcaaYB6ogW-WeAwV2jD4N4_etGqIUDrSCcLQp1E8Z5M9QHPC10_QN9k16L"><img src="https://mermaid.ink/img/pako:eNpNj8FqwzAQRH9F7MmF-OCrKQHXhlJwoFTpocg5bKxNYxpLYb06lJB_rxQF0j09mJkd5gKjtwQ1fDOej6r_GJyK15veo1Wv5IhRPD_veb19b8s2wVerX3aqLNdKZ_cS9jne8Dh5p9pTWIQ4i-ma6sEbU2xIUKVPHQo-7bJGzmbQptA-8Ej_LLe2pjL3giSoz7d7sqlu8tYUHS0yOZToeWRhBTPxjJONMy8pMoAcaaYB6ogW-WeAwV2jD4N4_etGqIUDrSCcLQp1E8Z5M9QHPC10_QN9k16L?type=png" alt="" /></a></p>
+
+<h1 id="prerequisites">Prerequisites</h1>
+
+<p>Assumptions:</p>
+
+<ul>
+  <li>Running on Windows WSL2, Liunx or Mac
+    <ul>
+      <li>Intel CPU can run all databases</li>
+      <li>Apple Silicon cannot run Oracle</li>
+    </ul>
+  </li>
+  <li>Have Arcion License or <code class="language-plaintext highlighter-rouge">replicant.lic</code>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">replicant.lic</code> file in the current directory</li>
+      <li><code class="language-plaintext highlighter-rouge">ARCION_LICENSE</code> env variable</li>
+    </ul>
+  </li>
+  <li>Have Docker 19.3.0 or above</li>
+  <li>Have <code class="language-plaintext highlighter-rouge">docker compose</code> or <code class="language-plaintext highlighter-rouge">docker-compose</code></li>
+  <li>Have git installed</li>
+  <li>Have access to a terminal</li>
+  <li>Have access to a browser</li>
+</ul>
+
+<p><a href="https://asciinema.org/a/587770"><img src="https://asciinema.org/a/587770.svg" alt="asciicast" /></a></p>
+
+<h1 id="recordings-of-the-demo">Recordings of the Demo</h1>
+
+<p>Arcion supports snapshot, real-time, snapshot, and delta-snapshot replication modes.
+Recorded Arcion CLI demos of source, destination, and replication type combination are available.
+The recordings use <code class="language-plaintext highlighter-rouge">asciiinema</code> so that YAML config files used can be cut / pasted.
+This is a functional demo using TPCC and YCSB.
+The data size is 1GB each, 1 thread on given to Arcion, and 8 GB of RAM shared.</p>
+
+<ul>
+  <li>Left side of the table (the left column) is the source.</li>
+  <li>Right side of the table (the top row) is the destination.</li>
+  <li>The cell has workloads and URL to the demo.</li>
+  <li>A blank cell means a demo has not been recorded as of yet.</li>
+</ul>
+
+<h2 id="snapshot-replication-cli-demos">Snapshot Replication CLI Demos</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>snapshot</th>
+      <th>cockroach</th>
+      <th>Google CloudSQL MySQL</th>
+      <th>kafka</th>
+      <th>minio</th>
+      <th>mysql</th>
+      <th>null</th>
+      <th>oracle</th>
+      <th>pg</th>
+      <th>redis stream</th>
+      <th>singlestore</th>
+      <th>snowflake</th>
+      <th>sqledge</th>
+      <th>sqlserver</th>
+      <th>yugabyte</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>db2</td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_db2_cockroach.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+      <td> </td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_db2_minio.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_db2_null.ascii.cast.gif">TPCC &amp; YCSB</a><br /><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_db2_null.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_db2_s2.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+      <td> </td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_db2_sqlserver.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>db2 luw</td>
+      <td> </td>
+      <td> </td>
+      <td><a href="https://asciinema.org/a/596930">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596933">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596925">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596934">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596927">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596926">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596929">TPCC YCSB</a></td>
+      <td> </td>
+      <td><a href="https://asciinema.org/a/596928">TPCC YCSB</a></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>informix</td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_informix_cockroach.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+      <td><a href="https://asciinema.org/a/596949">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596417">TPCC YCSB</a><br /><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_informix_minio.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596950">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596416">TPCC YCSB</a><br /><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_informix_null.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596952">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596953">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596955">TPCC YCSB</a></td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_informix_s2.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596415">TPCC YCSB</a></td>
+      <td> </td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_informix_sqlserver.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>mariabd</td>
+      <td><a href="https://asciinema.org/a/599290">TPCC &amp; YCSB</a></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>mysql</td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_mysql_cockroach.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td><a href="https://asciinema.org/a/597662">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596940">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596938">TPCC YCSB</a><br /><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_mysql_minio.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596941">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596942">TPCC YCSB</a><br /><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_mysql_null.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596943">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596937">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596948">TPCC YCSB</a></td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_mysql_s2.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td><a href="https://asciinema.org/a/M27aYd5QkOStjN80Pdqx2hBCc">TPCC YCSB</a></td>
+      <td> </td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_mysql_sqlserver.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>oracle</td>
+      <td> </td>
+      <td> </td>
+      <td><a href="https://asciinema.org/a/596635">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596638">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596642">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596643">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596958">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596641">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596957">TPCC YCSB</a></td>
+      <td> </td>
+      <td><a href="https://asciinema.org/a/596634">TPCC YCSB</a></td>
+      <td> </td>
+      <td> </td>
+      <td><a href="https://youtu.be/nKqncxWjRvM"></a></td>
+    </tr>
+    <tr>
+      <td>oraee</td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_oraee_cockroach.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+      <td> </td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_oraee_minio.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_oraee_null.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_oraee_s2.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+      <td> </td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_oraee_sqlserver.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>pg</td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_pg_cockroach.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+      <td><a href="https://asciinema.org/a/596959">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596960">TPCC YCSB</a><br /><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_pg_minio.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596962">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596963">TPCC YCSB</a><br /><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_pg_null.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+      <td><a href="https://asciinema.org/a/596961">TPCC YCSB</a></td>
+      <td> </td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_pg_s2.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596966">TPCC YCSB</a></td>
+      <td> </td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_pg_sqlserver.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>singlestore</td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_s2_cockroach.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+      <td> </td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_s2_minio.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_s2_null.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_s2_s2.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+      <td> </td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_s2_sqlserver.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>sqledge</td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_sqledge_cockroach.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+      <td> </td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_sqledge_minio.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_sqledge_null.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_sqledge_s2.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+      <td> </td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_sqledge_sqlserver.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>sqlserver</td>
+      <td><a href="https://asciinema.org/a/599286">TPCC &amp; YCSB</a><br /><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_sqlserver_cockroach.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+      <td> </td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_sqlserver_minio.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_sqlserver_null.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_sqlserver_s2.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+      <td> </td>
+      <td><a href="https://github.com/arcionlabs/demokit.gtihub.io/tree/main/docs/resources/asciinema/snapshot_sqlserver_sqlserver.ascii.cast.gif">TPCC &amp; YCSB</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>sybase ase</td>
+      <td><a href="https://asciinema.org/a/599284">TPCC &amp; YCSB</a></td>
+      <td> </td>
+      <td><a href="https://asciinema.org/a/599184">TPCC &amp; YCSB</a></td>
+      <td><a href="https://asciinema.org/a/599186">TPCC &amp; YCSB</a></td>
+      <td><a href="https://asciinema.org/a/599187">TPCC &amp; YCSB</a></td>
+      <td><a href="https://asciinema.org/a/599193">TPCC &amp; YCSB</a></td>
+      <td> </td>
+      <td><a href="https://asciinema.org/a/599192">TPCC &amp; YCSB</a></td>
+      <td><a href="https://asciinema.org/a/599191">TPCC &amp; YCSB</a></td>
+      <td><a href="https://asciinema.org/a/599280">TPCC &amp; YCSB</a></td>
+      <td> </td>
+      <td><a href="https://asciinema.org/a/599195">TPCC &amp; YCSB</a></td>
+      <td><a href="https://asciinema.org/a/599194">TPCC &amp; YCSB</a></td>
+      <td><a href="https://asciinema.org/a/599281">TPCC &amp; YCSB</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="full-replication-cli-demos">Full Replication CLI Demos</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>full</th>
+      <th>databricks</th>
+      <th>Google Cloud Storage</th>
+      <th>Google CloudSQL MySQL</th>
+      <th>kafka</th>
+      <th>minio</th>
+      <th>mongodb</th>
+      <th>mysql</th>
+      <th>null</th>
+      <th>oracle</th>
+      <th>pg</th>
+      <th>redis stream</th>
+      <th>singlestore</th>
+      <th>snowflake</th>
+      <th>sqlserver</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>db2 luw</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td><a href="https://asciinema.org/a/597115">TPCC YCSB</a></td>
+      <td> </td>
+      <td><a href="https://asciinema.org/a/597114">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/597116">TPCC YCSB</a></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>IBM Db2</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td><a href="https://youtu.be/TYXJhwjXIms">various</a></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>informix</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td><a href="https://asciinema.org/a/596970">YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596971">YCSB</a></td>
+      <td> </td>
+      <td><a href="https://asciinema.org/a/596959">YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596973">YCSB</a></td>
+      <td><a href="https://asciinema.org/a/46fe1mFKWyIvRhSaqEnIrGacN">YCSB</a>,<a href="https://asciinema.org/a/596974">YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596418">YCSB</a>,<a href="https://asciinema.org/a/596975">YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596977">YCSB</a></td>
+      <td> </td>
+      <td><a href="https://asciinema.org/a/596402">YCSB</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>mongodb</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td><a href="https://youtu.be/33TBVqFDuCk"></a></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>mysql</td>
+      <td><a href="https://youtu.be/ytKpvWJi3Lo">various</a></td>
+      <td><a href="https://asciinema.org/a/597274">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/597663">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596184">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596183">TPCC YCSB</a></td>
+      <td> </td>
+      <td><a href="https://asciinema.org/a/596980">TPCC YCSB</a>,<a href="https://asciinema.org/a/597442">TPCC &amp; YCSB</a>,<a href="https://asciinema.org/a/597443">TPCC &amp; YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596979">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596981">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/587771">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596982">TPCC YCSB</a></td>
+      <td><a href="https://youtu.be/x9_ccBjf1EQ">various</a></td>
+      <td><a href="https://asciinema.org/a/8CO7i2Ecj8jPdSh4mFOfDbm9F"></a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>oracle</td>
+      <td><a href="https://youtu.be/SAc7v7ZspPw"></a></td>
+      <td> </td>
+      <td> </td>
+      <td><a href="https://asciinema.org/a/596653">TPCC YCSB</a>,<a href="https://asciinema.org/a/596984">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596652">TPCC YCSB</a></td>
+      <td><a href="https://youtu.be/sK3tZmpb1YI">various</a>,<a href="https://youtu.be/dTChAc9GpSc"></a></td>
+      <td><a href="https://asciinema.org/a/596647">TPCC YCSB</a></td>
+      <td><a href="https://asciinema.org/a/596644">TPCC YCSB</a></td>
+      <td><a href="https://youtu.be/sVhraqx095g">various</a></td>
+      <td><a href="https://asciinema.org/a/596651">TPCC YCSB</a></td>
+      <td> </td>
+      <td><a href="https://youtu.be/x9_ccBjf1EQ">various</a></td>
+      <td><a href="https://asciinema.org/a/596633">YCSB</a>,<a href="https://youtu.be/XRAFNrhv5cI"></a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>pg</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td><a href="https://asciinema.org/a/598279">YCSB</a></td>
+      <td><a href="https://asciinema.org/a/598285">YCSB</a></td>
+      <td> </td>
+      <td><a href="https://asciinema.org/a/598277">YCSB</a></td>
+      <td> </td>
+      <td><a href="https://asciinema.org/a/598282">X</a></td>
+      <td><a href="https://asciinema.org/a/598284">YCSB</a></td>
+      <td><a href="https://asciinema.org/a/598286">YCSB</a></td>
+      <td> </td>
+      <td> </td>
+      <td><a href="https://asciinema.org/a/598281">YCSB</a></td>
+    </tr>
+    <tr>
+      <td>snowflake</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td><a href="https://youtu.be/8sn8KJfh9ns">various</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="group">Group</h1>
+
+<p><a href="/docs/source/">Source</a>
+<a href="./docs/targets/README.md">Target</a></p>
+
+
+        </section>
+
+        <aside id="sidebar">
+          
+
+          
+            <p class="repo-owner"><a href="https://github.com/arcionlabs/demokit.gtihub-io">demokit.gtihub-io</a> is maintained by <a href="https://github.com/arcionlabs">arcionlabs</a>.</p>
+          
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  </body>
+</html>
