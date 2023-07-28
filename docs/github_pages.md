@@ -21,15 +21,19 @@ bundle add webrick
 bundle exec jekyll serve
 ```
 
-testing with theme
-```bash
-git clone https://github.com/pages-themes/architect
-architect/script/bootstrap
-```
+
 
 `_config.yaml`
 ```
 remote_theme: pages-themes/architect@v0.2.0
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
+```
+
+testing with theme
+
+make sure to delete the other theme
+```bash
+git clone https://github.com/pages-themes/architect
+architect/script/bootstrap
 ```

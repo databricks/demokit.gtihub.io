@@ -4,7 +4,7 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="/assets/css/style.css?v=b7dc8fc9677de47d31274b4e508b6c2dad7510c0" media="screen" type="text/css">
+    <link rel="stylesheet" href="/assets/css/style.css?v=fb567a76d736f21e6e635ce5acf1c360d50427fa" media="screen" type="text/css">
     <link rel="stylesheet" href="/assets/css/print.css" media="print" type="text/css">
 
     <!--[if lt IE 9]>
@@ -76,14 +76,22 @@
 gem update github-pages
 
 jekyll build
+bundle add webrick
 bundle <span class="nb">exec </span>jekyll serve
 </code></pre></div></div>
 
+<p><code class="language-plaintext highlighter-rouge">_config.yaml</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>remote_theme: pages-themes/architect@v0.2.0
+plugins:
+- jekyll-remote-theme # add this line to the plugins list if you already have one
+</code></pre></div></div>
+
 <p>testing with theme</p>
+
+<p>make sure to delete the other theme</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/pages-themes/architect
 architect/script/bootstrap
 </code></pre></div></div>
-
 
         </section>
 
