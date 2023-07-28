@@ -4,4 +4,4 @@
 	});
 </script>
 
-![cockroach](/docs/resources/asciinema/snapshot_oraee_cockroach.ascii.cast.gif)
+![cockroach](../resources/asciinema/snapshot_oraee_cockroach.ascii.cast.gif)
