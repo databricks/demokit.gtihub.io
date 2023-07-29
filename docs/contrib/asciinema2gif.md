@@ -10,9 +10,11 @@ PATH=~/.cargo/bin:$PATH
 
 
 ```bash
-
-agg demo.cast demo.gif
+asciinema rec /tmp/demo.$$
+tmux attach
 
 . /tmp/ini_menu.sh
-agg --idle-time-limit .5 /tmp/tmpjqe3tsg9-ascii.cast $CFG_DIR/asciicast.gif
+FILENAME=${REPL_TYPE}_${SRCDB_TYPE}_${DSTDB_TYPE}_${workload_size_factor}.asciicast
+mv /tmp/demo.$$ $CFG_DIR/$FILENAME
+~/.cargo/bin/agg --idle-time-limit .5 $CFG_DIR/$FILENAME $CFG_DIR/$FILENAME.gif
 ```
