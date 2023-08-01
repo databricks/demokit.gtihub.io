@@ -30,8 +30,23 @@ Once the instance comes up
 - click save
 
 
+# authorize to connect
 to get you ip from home internet try
 [whatismyipaddress](https://whatismyipaddress.com/).com
+
+https://cloud.google.com/sql/docs/mysql/authorize-networks
+
+To open the Overview page of an instance, click the instance name.
+From the SQL navigation menu, select Connections.
+Click the Network tab.
+Select the Public IP checkbox.
+Click Add a network.
+In the Name field, enter a name for the New network.
+In the Network* field, enter the public IPv4 address or address range from which you want to allow connections.
+For the address range, you must use a valid CIDR notation (for example, 10.10.10.0/24).
+
+Click Done.
+Click Save.
 
 
 Test from local mysql client

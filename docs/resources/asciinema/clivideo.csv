@@ -103,3 +103,5 @@ snapshot,ase,informix,487,snapshot_ase_informix.ascii.cast,3efc16122-23.06.30.2-
 snapshot,ase,kafka,83,snapshot_ase_kafka.ascii.cast,3efc17532-23.06.30.2-ase-kafka-snapshot-1,3efc17532
 snapshot,ase,mariadb,66,snapshot_ase_mariadb.ascii.cast,3efc178dc-23.06.30.2-ase-mariadb-snapshot-1,3efc178dc
 snapshot,sqlserver,oraee,3,snapshot_sqlserver_oraee.ascii.cast,3efc57b6c-23.06.30.2-sqlserver-oraee-snapshot-1,3efc57b6c
+snapshot,sqlserver,oraee,493,snapshot_sqlserver_oraee.ascii.cast,3efc57c80-23.06.30.2-sqlserver-oraee-snapshot-1,3efc57c80
+snapshot,sqlserver,oraee,79,snapshot_sqlserver_oraee.ascii.cast,3efc5b3f5-23.06.30.2-sqlserver-oraee-snapshot-1,3efc5b3f5
