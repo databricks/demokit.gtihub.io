@@ -60,6 +60,25 @@ oracle | [](https://youtu.be/SAc7v7ZspPw) |   |   | [TPCC YCSB](https://asciin
 pg |   |   |   | [YCSB](https://asciinema.org/a/598279) | [YCSB](https://asciinema.org/a/598285) |   | [YCSB](https://asciinema.org/a/598277) |   | [X](https://asciinema.org/a/598282) | [YCSB](https://asciinema.org/a/598284) | [YCSB](https://asciinema.org/a/598286) |   |   | [YCSB](https://asciinema.org/a/598281)
 snowflake |   |   |   |   |   |   |   |   |   |   |   |   |   | [various](https://youtu.be/8sn8KJfh9ns)
 
+# UI Videos
+
+## Snapshot Replications
+
+full | confluent cloud | databricks | databricks delta lake | minio | mongodb | postgresql | singlestore
+-- | -- | -- | -- | -- | -- | -- | --
+mysql | [video](https://youtu.be/ai29WIaORzM) | [Voiceover](https://youtu.be/GoGykSeENr8) |   | [video](https://www.loom.com/share/1aab4273997641c58c10dd07e572d9b3?sid=d43bde85-fb0f-478c-a45c-e9cb11dce445) |   | [video](https://www.loom.com/share/96b01cf0edf345fa973c7b510abbbd51?sid=0e209564-7b65-4992-abd3-0ab40a16b2f6) | [video](https://www.youtube.com/watch?v=9-OLoaWUzlU)
+oracle |   | [video](https://youtu.be/iw0PjnxHcNY)<br />[video](https://youtu.be/Ybu1CtZ6ahk) | [video](https://youtu.be/nqPn5a0qRJI) |   | [video](https://youtu.be/8IgKtaeq5F0) | [video](https://youtu.be/4rqPe18nhpI) |  
+sql server |   | [Voiceover](https://youtu.be/obouA95y_jw) |   |   |   |   |  
+
+
+## Full Replications
+
+snapshot | S3 | postgresql | snowflake
+-- | -- | -- | --
+cloud sql mysql | [video](https://www.loom.com/share/3c68e19695d947398073fe43ecc34c68?sid=7fb74328-ac07-4f40-9261-cf7299eedf88) | [video](https://www.loom.com/share/aa1fde90806146b88cb7fb029c6bb862?sid=dccfdc89-5578-41ed-b44d-1c917d30264c) | [video](https://www.loom.com/share/0492bc74573a47fa9f720f140f4c8add?sid=d37e9c03-eded-4a5f-ab2b-a63e6780beb0)
+cloud sql postgresql |   | [video](https://www.loom.com/share/231ae18a80834fc4af3ede93d3d66f48?sid=dbbd13c3-5a4e-415c-b319-1dda5cedbcd7) | [video](https://www.loom.com/share/a25e1fe6a22a457cbaa29ea9d76ba243?sid=2d79f393-645d-4269-a8f9-6d1d6154e491)
+
+
 
 # About the Arcion demo kit  
 
