@@ -64,7 +64,7 @@ snowflake |   |   |   |   |   |   |   |   |   |   |   |   |   | [va
 
 ## Snapshot Replications
 
-full | confluent cloud | databricks | databricks delta lake | minio | mongodb | postgresql | singlestore
+full | confluent cloud | databricks | databricks delta lake | S3 | mongodb | postgresql | singlestore
 -- | -- | -- | -- | -- | -- | -- | --
 mysql | [video](https://youtu.be/ai29WIaORzM) | [Voiceover](https://youtu.be/GoGykSeENr8) |   | [video](https://www.loom.com/share/1aab4273997641c58c10dd07e572d9b3?sid=d43bde85-fb0f-478c-a45c-e9cb11dce445) |   | [video](https://www.loom.com/share/96b01cf0edf345fa973c7b510abbbd51?sid=0e209564-7b65-4992-abd3-0ab40a16b2f6) | [video](https://www.youtube.com/watch?v=9-OLoaWUzlU)
 oracle |   | [video](https://youtu.be/iw0PjnxHcNY)<br />[video](https://youtu.be/Ybu1CtZ6ahk) | [video](https://youtu.be/nqPn5a0qRJI) |   | [video](https://youtu.be/8IgKtaeq5F0) | [video](https://youtu.be/4rqPe18nhpI) |  
