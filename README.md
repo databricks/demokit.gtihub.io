@@ -8,7 +8,7 @@ Cut and paste the following in a terminal.
 
 - run the latest
 ```
-/bin/bash -c "$(curl -k -fsSL https://raw.githubusercontent.com/arcionlabs/docker-dev/HEAD/install.sh)"
+/bin/bash -c "$(curl -k -fsSL https://raw.githubusercontent.com/databricks/docker-dev/refs/heads/main/install.sh)"
 ```
 
 # Recording of the Demos
@@ -115,7 +115,7 @@ Assumptions:
 
 ```bash
 export ARCION_WORKLOADS_TAG=23.07
-/bin/bash -c "$(curl -k -fsSL https://raw.githubusercontent.com/arcionlabs/docker-dev/${ARCION_WORKLOADS_TAG:-HEAD}/install.sh)"
+/bin/bash -c "$(curl -k -fsSL https://raw.githubusercontent.com/databricks/docker-dev/refs/heads/{ARCION_WORKLOADS_TAG:-main}/install.sh)"
 ```
 
 # Group
