@@ -8,7 +8,7 @@ Cut and paste the following in a terminal.
 
 - run the latest
 ```
-/bin/bash -c "$(curl -k -fsSL https://raw.githubusercontent.com/arcionlabs/docker-dev/HEAD/install.sh)"
+/bin/bash -c "$(curl -k -fsSL /docker-dev/HEAD/install.sh)"
 ```
 
 # Recording of the Demos
