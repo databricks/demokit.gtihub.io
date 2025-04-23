@@ -1,4 +1,4 @@
-Welcome to the [Arcion](http://arcion.io) demo kit.
+Welcome to the [Arcion](http://docs.arcion.io) demo kit.
 Arcion replicates data from one platform to another.
 The demo kit make it easy to see Arcion in action.
 
