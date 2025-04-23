@@ -51,7 +51,7 @@ mv recpipeline.$$ $CFG_DIR/$FILENAME
     For exmaple:
 
     ```
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/databricks/docker-dev/refs/heads/{ARCION_WORKLOADS_TAG:-main}/install.sh)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/databricks/docker-dev/refs/heads/${ARCION_WORKLOADS_TAG:-main}/install.sh)"
     ```
 
 3. stop and upload:
