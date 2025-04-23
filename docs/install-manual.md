@@ -12,7 +12,7 @@ echo "${ARCION_LICENSE}" | base64 -d
 Clone this repo
 
 ```bash
-git clone https://github.com/arcionlabs/docker-dev 
+git clone https://github.com/databricks/docker-dev 
 cd docker-dev
 git fetch
 ```
